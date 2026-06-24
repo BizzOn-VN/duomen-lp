@@ -108,3 +108,65 @@ shareButtons.forEach(btn => {
 });
 
 // Click ra ngoài vùng trống bất kỳ trên màn hình thì đóng tất cả các nút lại
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const aiButtons = document.querySelectorAll('.ai-btn');
+  const closeButtons = document.querySelectorAll('.ai-close-btn');
+
+  // Logic Đóng/Mở/Chuyển đổi khi bấm các nút chọn AI
+  aiButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const targetContainer = document.getElementById(targetId);
+
+      if (btn.classList.contains('active')) {
+        btn.classList.remove('active');
+        if (targetContainer) targetContainer.style.display = 'none';
+        return;
+      }
+
+      document.querySelectorAll('.ai-chat-container').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.ai-btn').forEach(el => el.classList.remove('active'));
+
+      btn.classList.add('active');
+      if (targetContainer) targetContainer.style.display = 'flex'; // Dùng flex để header hoạt động chuẩn
+    });
+  });
+
+  // Logic khi bấm vào nút Đóng (✖)
+  closeButtons.forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+      const targetId = closeBtn.getAttribute('data-close');
+      
+      // 1. Ẩn khung chat tương ứng
+      const targetContainer = document.getElementById(targetId);
+      if (targetContainer) targetContainer.style.display = 'none';
+
+      // 2. Tìm và xóa class active của nút bấm kích hoạt khung chat đó
+      const activeBtn = document.querySelector(`.ai-btn[data-target="${targetId}"]`);
+      if (activeBtn) activeBtn.classList.remove('active');
+    });
+  });
+
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Tìm tất cả các nút có class .close-all-ai
+  const closeAllButtons = document.querySelectorAll('.close-all-ai');
+
+  closeAllButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // 1. Ẩn tất cả khung chat cùng lúc
+      document.querySelectorAll('.ai-chat-container').forEach(el => {
+        el.style.display = 'none';
+      });
+
+      // 2. Xóa trạng thái sáng (active) của tất cả các nút kích hoạt
+      document.querySelectorAll('.ai-btn').forEach(el => {
+        el.classList.remove('active');
+      });
+    });
+  });
+});

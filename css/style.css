@@ -109,6 +109,30 @@ img{
   width: 100%;
 }
 
+
+  /* Style chung cho các khung chat */
+  .ai-chat-container {
+    display: none; /* Ẩn toàn bộ mặc định */
+    width: 50%;
+    height: 90%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  .ai-chat-container iframe { width: 100%; height: 100%; border: none; }
+  .close-all-ai{
+       position: absolute;
+    left: 10%;
+    top: 0%;
+    width: 60%;
+    height: 10%;
+    cursor: pointer;
+  }
 /* --- 1. SETUP KHUNG CHỨA (BANNER) --- */
 .banner {
     display: table;
@@ -1376,6 +1400,7 @@ button:focus{
   width: 30%;
   display: table;
   margin: 30px auto 0 auto;
+  cursor: pointer;
 }
 .ctn-button:hover{
   transform: scale(1.1);
