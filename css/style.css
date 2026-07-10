@@ -107,10 +107,9 @@ img{
   .ai-chat-container iframe { width: 100%; height: 100%; border: none; }
   .close-all-ai{
        position: absolute;
-    left: 10%;
+    right: 0.5%;
     top: 0%;
-    width: 60%;
-    height: 10%;
+    width: 3%;
     cursor: pointer;
   }
 /* --- 1. SETUP KHUNG CHỨA (BANNER) --- */
@@ -534,7 +533,7 @@ img{
     width: 40%;
     animation: ctn-button-5 1s infinite;
 }
-.fancybox-content{
+.md-popup-1.fancybox-content{
   padding: 0;
   width: 30%;
 }
@@ -564,7 +563,7 @@ img{
     top: 88%;
     width: 50%;
   }
-  .fancybox-content{
+  .md-popup-1.fancybox-content{
     width: 90%;
   }
   .section-5 .bot-content{
@@ -583,8 +582,8 @@ img{
 }
 .section-2 .img-duongruot{
   position: absolute;
-  left: 5%;
-  top: 23%;
+  left: 12%;
+  top: 17%;
   width: 40%;
 }
 .section-2 .img-title{
@@ -595,8 +594,8 @@ img{
 }
 .section-2 .sc2-img-6{
   position: absolute;
-  left: 27%;
-    top: 10%;
+  left: 37%;
+    top: 5%;
     width: 18%;
     transform: scale(0.0);
 }
@@ -654,8 +653,8 @@ img{
 }*/
 .section-2 .sc2-img-1{
   position: absolute;
-  left: 27%;
-    top: 10%;
+  left: 37%;
+    top: 5%;
     width: 18%;
     position: absolute;
     opacity: 0;
@@ -666,8 +665,8 @@ img{
 }
 .section-2 .vien-thuoc-4{
   position: absolute;
-  left: 27%;
-  top: 10%;
+  left: 37%;
+  top: 5%;
   width: 15%;
    
    opacity: 0;
@@ -679,21 +678,21 @@ img{
 @keyframes moveAlongPath {
     /* 1. Vị trí xuất phát ở đầu thực quản (Top: 15%, Left: 35%) */
     0% {
-       left: 23%;
-    top: 15%;
+       left: 27%;
+    top: 10%;
     width: 15%;
     opacity: 1;
     }
     15%{
       top: 30%;
-        left: 20%;
+        left: 27%;
         width: 10%;
         transform: rotate(-28deg);
     }
     /* 2. Chạy dọc xuống giữa ống thực quản */
     50% {
-        top: 50%;
-        left: 25%;
+        top: 45%;
+        left: 32%;
         width: 5%;
         transform: rotate(-28deg);
     }
@@ -702,21 +701,21 @@ img{
     
     /* 4. Xuống đáy dạ dày và bắt đầu xoay đầu chuẩn bị rẽ trái */
     80% {
-        top: 61%;
-        left: 32%;
+        top: 55%;
+        left: 40%;
         width: 10%;
         transform: rotate(-50deg);
     }
     90%{
-      left: 33%;
-            top: 63%;
+      left: 40%;
+            top: 60%;
             width: 8%;
             opacity: 1;
       content: url("../images/vien-thuoc-4.png");
     }
     /* 5. Chạy hẳn sang khúc ruột non bên trái và ẩn đi */
     100% {
-        left: 33%;
+        left: 40%;
             top: 63%;
             width: 10%;
             opacity: 1;
@@ -970,13 +969,13 @@ img{
 }
 
 .section-2.active .sc2-img-3 { width: 40%;
-    left: 41%;
-    top: 52%; animation: sc2-reveal 0.5s ease-in-out forwards; animation-delay: 9s; }
+    left: 48%;
+    top: 50%; animation: sc2-reveal 0.5s ease-in-out forwards; animation-delay: 9s; }
 .section-2.active .sc2-img-5 {     width: 8%;
-    left: 31%;
-    top: 84.5%;z-index: 2; animation: sc2-reveal 0.5s ease-in-out forwards; animation-delay: 10.5s; }
+    left: 38%;
+    top: 85.5%;z-index: 2; animation: sc2-reveal 0.5s ease-in-out forwards; animation-delay: 10.5s; }
 .section-2.active .sc2-img-4 {width: 47%;
-    left: 36%;
+    left: 43%;
     top: 72%;z-index: 2; animation: sc2-reveal 0.5s ease-in-out forwards; animation-delay: 11s; }
 
 @keyframes sc2-reveal {
@@ -991,33 +990,33 @@ img{
     transform: scale(0.0);
 }
 
-.section-2.active .btn-sc2-1 { left: 48.5%; top: 62.5%; animation: sc2-scale-1 0.7s ease-in-out 9.5s forwards, sc2-tranform 1s infinite 12.5s; }
-.section-2.active .btn-sc2-2 { left: 66.5%; top: 62.5%; animation: sc2-scale-2 0.7s ease-in-out 9.7s forwards, sc2-tranform 1s infinite 12.5s; }
-.section-2.active .btn-sc2-3 { left: 57%; top: 68%; animation: sc2-scale-3 0.7s ease-in-out 9.9s forwards, sc2-tranform 1s infinite 12.5s; }
-.section-2.active .btn-sc2-4 {     left: 48.5%;
-    top: 79.5%; animation: sc2-scale-4 0.7s ease-in-out 11.5s forwards, sc2-tranform 1s infinite 12.5s;  }
-.section-2.active .btn-sc2-5 { left: 66.5%;
-    top: 79.5%;  animation: sc2-scale-5 0.7s ease-in-out 11.7s forwards, sc2-tranform 1s infinite 12.5s;  }
+.section-2.active .btn-sc2-1 { left: 55.5%; top: 62.5%; animation: sc2-scale-1 0.7s ease-in-out 9.5s forwards, sc2-tranform 1s infinite 12.5s; }
+.section-2.active .btn-sc2-2 { left: 73.5%; top: 62.5%; animation: sc2-scale-2 0.7s ease-in-out 9.7s forwards, sc2-tranform 1s infinite 12.5s; }
+.section-2.active .btn-sc2-3 { left: 64%; top: 68%; animation: sc2-scale-3 0.7s ease-in-out 9.9s forwards, sc2-tranform 1s infinite 12.5s; }
+.section-2.active .btn-sc2-4 {     left: 55.5%;
+    top: 79.5%;z-index: 2; animation: sc2-scale-4 0.7s ease-in-out 11.5s forwards, sc2-tranform 1s infinite 12.5s;  }
+.section-2.active .btn-sc2-5 { left: 73.5%;
+    top: 79.5%;z-index: 2;  animation: sc2-scale-5 0.7s ease-in-out 11.7s forwards, sc2-tranform 1s infinite 12.5s;  }
 
 @keyframes sc2-scale-1 {
     0% { transform: scale(0.0); top: 56%; }
-    100% { transform: scale(1.0); top: 62.5%; }
+    100% { transform: scale(1.0); top: 61.5%; }
 }
 @keyframes sc2-scale-2 {
     0% { transform: scale(0.0); top: 56%; }
-    100% { transform: scale(1.0); top: 62.5%; }
+    100% { transform: scale(1.0); top: 61.5%; }
 }
 @keyframes sc2-scale-3 {
     0% { transform: scale(0.0); top: 56%; }
-    100% { transform: scale(1.0); top: 67%; }
+    100% { transform: scale(1.0); top: 66.5%; }
 }
 @keyframes sc2-scale-4 {
     0% { transform: scale(0.0); top: 73.5%; }
-    100% { transform: scale(1.0); top: 82.5%; }
+    100% { transform: scale(1.0); top: 83.5%; }
 }
 @keyframes sc2-scale-5 {
     0% { transform: scale(0.0); top: 73.5%; }
-    100% { transform: scale(1.0); top: 82.5%; }
+    100% { transform: scale(1.0); top: 83.5%; }
 }
 @keyframes sc2-tranform{
   0%,100%{
@@ -1167,9 +1166,9 @@ img{
 
   }
   .section-2.active .sc2-img-3{
-       width: 60%;
-        left: 13%;
-        top: 41.5%;
+       width: 75%;
+        left: 3%;
+        top: 38.5%;
   }
   .section-2 [class^="btn-sc2-"]{
     width: 30%;
@@ -1186,7 +1185,7 @@ img{
     }
     100% {
         transform: scale(1.0);
-        top: 48%;
+        top: 47%;
     }
   }
   .section-2 .btn-sc2-6{
@@ -1207,7 +1206,7 @@ img{
     }
     100% {
         transform: scale(1.0);
-        top: 52%;
+        top: 51%;
     }
   }
   .section-2 .btn-sc2-7{
@@ -1226,7 +1225,7 @@ img{
     }
     100% {
         transform: scale(1.0);
-        top: 56%;
+        top: 55%;
     }
   }
   .section-2 .btn-sc2-8{
@@ -1239,12 +1238,12 @@ img{
         top: 73.5%;
   }
   .section-2.active .sc2-img-4{
-      width: 60%;
-        left: 19%;
+      width: 75%;
+        left: 11%;
         top: 75.3%;
   }
   .section-2.active .btn-sc2-4{
-    left: 19%;
+    left: 11%;
     top: 86.5%;
         animation: sc2-scale-4 0.7s ease-in-out 11.5s forwards, sc2-tranform 1s infinite 12.5s;;
   }
@@ -1255,7 +1254,7 @@ img{
     }
     100% {
         transform: scale(1.0);
-        top: 85.5%;
+        top: 87%;
     }
   }
   .section-2 .btn-sc2-9{
@@ -1274,7 +1273,7 @@ img{
     }
     100% {
         transform: scale(1.0);
-        top: 85.5%;
+        top: 87%;
     }
   }
   .section-2 .btn-sc2-10{
@@ -1641,7 +1640,7 @@ button:focus{
 }
 
 @media (max-width: 768px) {
-  .faq-wrapper { flex-direction: column; }
+  .faq-wrapper { flex-direction: column; width: 90%; }
   .faq-questions-side { border-right: none; border-bottom: 1px solid #e5e7eb; }
   .faq-answers-side { display: none; }
   .answer-box { position: relative; display: none; padding: 15px 0 0 0; background: transparent;}
@@ -1727,6 +1726,28 @@ button:focus{
 .footer-container a{
   font-size: calc(2px + 0.8vw);
   font-family: 'SVN-GothamLight';
+  
+}
+.footer-container .social-links a{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 5px;
+  animation: social-link 2s infinite;
+}
+.footer-container .social-links a span{
+  
+}
+@keyframes social-link{
+  0%,20%,40%{
+    opacity: 0;
+  }
+  10%,30%,50%{
+    opacity: 1;
+  }
+}
+.footer-container .social-links a img{
+  width: 10%;
 }
 .footer-container span{
   font-size: calc(2px + 0.8vw);
@@ -1762,6 +1783,9 @@ button:focus{
   .footer-container a{
     font-size: calc(4px + 1vw);
     font-family: 'SVN-GothamLight';
+  }
+  .footer-container .social-links a img{
+    width: 20%;
   }
   .footer-container span{
     font-size: calc(4px + 1vw);
@@ -1860,7 +1884,7 @@ button:focus{
   right: 0;
   bottom: 0;
   width: 12%;
-  z-index: 9999;
+  z-index: 9998;
 }
 @media screen and (max-width: 767px){
   .md-ai-bot{
@@ -1997,9 +2021,20 @@ button:focus{
         width: 10%;
   }
 }
-
-
-
+.md-popup-2 {
+  background: linear-gradient(90deg,#bae3f8  0%,#FFF 50%, #bae3f8  100%);
+  display: none;
+}
+.md-popup-2 .md-col{
+  margin-bottom: 20px;
+}
+.md-popup-2 .md-col ul{
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.md-popup-2 .md-col ul li{
+  list-style: disc;
+}
 .md-desktop{
     display: block !important;
 }
