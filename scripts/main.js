@@ -243,3 +243,37 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+
+const buttons = document.querySelectorAll('.scrollForm');
+
+buttons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    
+    const targetSelector = button.getAttribute('data-target');
+    if (!targetSelector) return;
+
+    const target = document.querySelector(targetSelector);
+    
+    if (target) {
+      const targetPosition = target.getBoundingClientRect().top;
+      const startPosition = window.scrollY || window.pageYOffset;
+      
+      // XỬ LÝ RESPONSIVE CHO OFFSET TẠI ĐÂY
+      let offset = 0;
+      if (window.innerWidth < 768) {
+        offset = window.innerHeight * 0.5;; // Mobile: cách 20px
+      } else {
+        offset = window.innerHeight * 0.7; // Desktop: cách 10% màn hình
+      }
+      
+      const targetY = targetPosition + startPosition + offset;
+
+      window.scrollTo({
+        top: targetY,
+        behavior: 'smooth'
+      });
+    }
+  });
+});

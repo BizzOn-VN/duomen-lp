@@ -17,6 +17,7 @@ body {
   color: #000;
   line-height: 1.5;
   background: #FFF;
+  cursor: url(../images/vien-thuoc-cursor.png) 16 16, auto !important;
 }
 @font-face {
   font-family: 'SVN-Gotham';
@@ -36,6 +37,7 @@ a {
   -webkit-transition-duration: 0.2s;
        -o-transition-duration: 0.2s;
           transition-duration: 0.2s;
+           cursor: url(../images/vien-thuoc-cursor.png) 16 16, auto !important;
 }
 a:hover {
   text-decoration: none;
@@ -174,11 +176,11 @@ img{
    0% {
     transform: rotateY(0deg);
   }
-  10% {
+  40% {
     /* Lật sang mặt sau (180 độ) trong 0.5s đầu */
     transform: rotateY(0deg);
   }
-  20% {
+  50% {
     /* Giữ nguyên mặt sau trong 1s tiếp theo */
     transform: rotateY(180deg);
   }
@@ -186,11 +188,10 @@ img{
     /* Lật ngược lại mặt trước (360 độ hoặc về 0deg) trong 0.5s */
     transform: rotateY(180deg);
   }
-
   /* --- GIAI ĐOẠN 2: NGHỈ (Chiếm 8 giây còn lại để đủ 10s) --- */
   100% {
     /* Giữ nguyên mặt trước cho đến hết giây thứ 10 rồi lặp lại */
-    transform: rotateY(360deg);
+    transform: rotateY(0deg);
   }
 }
 .banner .md-ico-1 .ico-1{
@@ -294,6 +295,9 @@ img{
   10%{
     transform: scale(1.0);
   }
+  90%{
+    transform: scale(1.0);
+  }
   100%{
     transform: scale(0.0);
   }
@@ -303,6 +307,9 @@ img{
     transform: scale(0.0);
   }
   10%{
+    transform: scale(1.0);
+  }
+  90%{
     transform: scale(1.0);
   }
   100%{
@@ -316,6 +323,9 @@ img{
   10%{
     transform: scale(1.0);
   }
+  90%{
+    transform: scale(1.0);
+  }
   100%{
     transform: scale(0.0);
   }
@@ -325,6 +335,9 @@ img{
     transform: scale(0.0);
   }
   10%{
+    transform: scale(1.0);
+  }
+  90%{
     transform: scale(1.0);
   }
   100%{
@@ -338,6 +351,9 @@ img{
   10%{
     transform: scale(1.0);
   }
+  90%{
+    transform: scale(1.0);
+  }
   100%{
     transform: scale(0.0);
   }
@@ -346,11 +362,11 @@ img{
   0%, 10%{
     transform: scale(0.0);
   }
-  20%{
+  50%{
     transform: scale(0.0);
 
   }
-  30%{
+  60%{
     transform: scale(1.0);
   }
   100%{
@@ -361,11 +377,11 @@ img{
   0%, 10%{
     transform: scale(0.0);
   }
-  20%{
+  50%{
     transform: scale(0.0);
 
   }
-  30%{
+  60%{
     transform: scale(1.0);
   }
   100%{
@@ -376,11 +392,11 @@ img{
   0%, 10%{
     transform: scale(0.0);
   }
-  20%{
+  50%{
     transform: scale(0.0);
 
   }
-  30%{
+  60%{
     transform: scale(1.0);
   }
   100%{
@@ -391,11 +407,11 @@ img{
   0%, 10%{
     transform: scale(0.0);
   }
-  20%{
+  50%{
     transform: scale(0.0);
 
   }
-  30%{
+  60%{
     transform: scale(1.0);
   }
   100%{
@@ -446,9 +462,9 @@ img{
 .section-5 .ani-tiasang{
   position: absolute;
        position: absolute;
-       left: 65.5%;
-    top: 15%;
-    width: 8%;
+       left: 66.5%;
+    top: 16%;
+    width: 4%;
  
  transform: scale(0) rotate(0deg); 
 }
@@ -459,12 +475,12 @@ img{
     filter: brightness(0.5) ;
   }
   35% {
-    transform: scale(1.3) rotate(180deg); /* Phóng to cực đại, xoay mạnh và lóe sáng */
+    transform: scale(1.2) rotate(180deg); /* Phóng to cực đại, xoay mạnh và lóe sáng */
     filter: brightness(3) ;
   }
   45% {
     /* Giữ điểm nhấn lóe sáng và xoay thêm một chút để tạo độ mượt */
-    transform: scale(1.2) rotate(210deg);
+    transform: scale(1.1) rotate(210deg);
     filter: brightness(2.5) ;
   }
   100% {
@@ -484,10 +500,12 @@ img{
 }
 @keyframes pop-out{
   0%{
-    transform: scale(0.0);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100%{
-    transform: scale(1.0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .section-5.active .ani-tiasang{
@@ -495,7 +513,7 @@ img{
   animation-delay: 1s;
 }
 .section-5.active .text-3{
-  animation: pop-out 1s ease-in-out forwards, pop-out-2 5s infinite 1s;
+  animation: pop-out 1s ease-in-out forwards;
 }
 @keyframes pop-out-2{
   0%,6%,12%,18%,24%{
@@ -532,6 +550,7 @@ img{
     bottom: 7%;
     width: 40%;
     animation: ctn-button-5 1s infinite;
+    z-index: 2;
 }
 .md-popup-1.fancybox-content{
   padding: 0;
@@ -621,12 +640,14 @@ img{
   animation-delay: 2.5s;
 }
 .section-2.active .sc2-img-6 .text6-img-2{
-  animation: text6-img-1 1s ease-in-out forwards;
-  animation-delay: 3s;
+  animation: text6-img-1 2s ease-in-out forwards 0.5s;
 }
 @keyframes text6-img-1{
   0%{
     transform: scale(0.0);
+  }
+  30%{
+    transform: scale(1.0);
   }
   100%{
     transform: scale(1.0);
@@ -674,6 +695,32 @@ img{
 .section-2.active .vien-thuoc-4{
   animation: moveAlongPath 4s ease-in-out forwards;
    animation-delay: 4.5s;
+}
+.section-2 .ico-vien-thuoc{
+  position: absolute;
+      left: 43%;
+    top: 66%;
+    width: 5%;
+      opacity: 0;
+      
+}
+.section-2.active .ico-vien-thuoc{
+  animation: ico-vien-thuoc 4s ease-in-out forwards;
+  animation-delay: 4.7s;
+}
+@keyframes ico-vien-thuoc{
+  0%{
+    opacity: 0;
+    transform: scale(0.0);
+  }
+  90%{
+    opacity: 0;
+    transform: scale(0.0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1.0);
+  }
 }
 @keyframes moveAlongPath {
     /* 1. Vị trí xuất phát ở đầu thực quản (Top: 15%, Left: 35%) */
@@ -818,7 +865,9 @@ img{
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
-
+.section-2 .show-btn:hover .social-icons{
+  transform: translateX(0%);
+}
 .light-glow {
   position: absolute;
   left: 0;
@@ -925,6 +974,48 @@ img{
     transform: scale(0.0);
 
 }
+.section-2 .img-vienthuoc-front {
+    position: absolute;
+    left: 26%;
+    top: 26%;
+    width: 50%;
+    opacity: 0;
+     
+}
+.section-2.active .img-vienthuoc-front{
+  animation:  AlongPath-pop-in-2 2s ease-in-out forwards;
+}
+@keyframes AlongPath-pop-in-2{
+  0%{
+    opacity: 0;
+    transform: scale(0.0);
+  }
+  30%{
+    opacity: 1;
+    transform: scale(1.0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1.0);
+  }
+}
+.section-2 .img-duongvien{
+  transform: scale(0.0);
+}
+.section-2.active .img-duongvien{
+  animation: img-duongvien 2s ease-in-out forwards;
+}
+@keyframes img-duongvien{
+  0%{
+    transform: rotate(-180deg) scale(0.0);
+  }
+  40%{
+    transform: rotate(0deg) scale(1.0);
+  }
+  100%{
+     transform: rotate(0deg) scale(1.0);
+  }
+}
 /* --- 1. VIÊN THUỐC --- */
 /*.section-2 .sc2-img-1 {
     position: absolute;
@@ -941,20 +1032,21 @@ img{
 @keyframes AlongPath-pop-in{
   0%{
     opacity: 0;
+    transform: scale(0.0);
   }
-  50%{
+  70%{
     
     opacity: 1;
     transform: scale(1.0);
   }
-  60%,80%{
-    transform: scale(1.2);
+  80%{
+    transform: scale(1.1);
   }
-  70%,90%{
-    transform: scale(1.0);
+  90%{
+    transform: scale(0.9);
   }
   100%{
-    
+    transform: scale(1.0);
     opacity: 1;
   }
 }
@@ -991,12 +1083,12 @@ img{
 }
 
 .section-2.active .btn-sc2-1 { left: 55.5%; top: 62.5%; animation: sc2-scale-1 0.7s ease-in-out 9.5s forwards, sc2-tranform 1s infinite 12.5s; }
-.section-2.active .btn-sc2-2 { left: 73.5%; top: 62.5%; animation: sc2-scale-2 0.7s ease-in-out 9.7s forwards, sc2-tranform 1s infinite 12.5s; }
-.section-2.active .btn-sc2-3 { left: 64%; top: 68%; animation: sc2-scale-3 0.7s ease-in-out 9.9s forwards, sc2-tranform 1s infinite 12.5s; }
+.section-2.active .btn-sc2-2 { left: 73.5%; top: 62.5%; animation: sc2-scale-2 0.7s ease-in-out 9.7s forwards, sc2-tranform 1s infinite 12.7s; }
+.section-2.active .btn-sc2-3 { left: 64%; top: 68%; animation: sc2-scale-3 0.7s ease-in-out 9.9s forwards, sc2-tranform 1s infinite 12.9s; }
 .section-2.active .btn-sc2-4 {     left: 55.5%;
-    top: 79.5%;z-index: 2; animation: sc2-scale-4 0.7s ease-in-out 11.5s forwards, sc2-tranform 1s infinite 12.5s;  }
+    top: 79.5%;z-index: 2; animation: sc2-scale-4 0.7s ease-in-out 11.5s forwards, sc2-tranform 1s infinite 13.1s;  }
 .section-2.active .btn-sc2-5 { left: 73.5%;
-    top: 79.5%;z-index: 2;  animation: sc2-scale-5 0.7s ease-in-out 11.7s forwards, sc2-tranform 1s infinite 12.5s;  }
+    top: 79.5%;z-index: 2;  animation: sc2-scale-5 0.7s ease-in-out 11.7s forwards, sc2-tranform 1s infinite 13.3s;  }
 
 @keyframes sc2-scale-1 {
     0% { transform: scale(0.0); top: 56%; }
@@ -1295,13 +1387,13 @@ img{
   width: 70%;
   margin: 0 auto;
 }
-.section-3.active .top-sc-3 .md-content .shine-sweep {
+.section-5.active .shine-sweep {
    content: "";
             position: absolute;
-            top: 0%;
-            left: -150%; /* Bắt đầu hoàn toàn bên trái, ngoài khung */
+            bottom: 12%;
+            left: -100%; /* Bắt đầu hoàn toàn bên trái, ngoài khung */
             width: 100%;
-            height: 100%;
+            height: 80%;
             
             /* Tạo dải sáng màu trắng mờ */
             background: linear-gradient(
@@ -1317,19 +1409,20 @@ img{
             transform: skewX(-25deg);
             
             /* Định nghĩa animation */
-            animation: shine-sweep 3s  linear; /* Chạy vô hạn */
-            animation-delay: 2s;
+            animation: shine-sweep 1s  linear; /* Chạy vô hạn */
+            animation-delay: 1s;
             z-index: 1; /* Nằm trên hình ảnh */
 }
 @keyframes shine-sweep {
             0% {
-                left: -150%; /* Bắt đầu bên trái */
+                left: -100%; /* Bắt đầu bên trái */
             }
             30% {
-                left: 150%; /* Chạy nhanh sang phải */
+                left: 50%; /* Chạy nhanh sang phải */
             }
             100% {
-                left: 150%; /* Giữ nguyên bên phải (tạo khoảng nghỉ) */
+                left: 50%;
+                opacity: 0; /* Giữ nguyên bên phải (tạo khoảng nghỉ) */
             }
         }
 .section-6 .bot-sc-3 .md-content{
@@ -1421,6 +1514,11 @@ img{
   }
   .section-3 h6{
     font-size: calc(10px + 2vw);
+  }
+  .section-2 .ico-vien-thuoc{
+    left: 63%;
+    top: 58%;
+    width: 12%;
   }
 }
 
@@ -1630,6 +1728,12 @@ button:focus{
 .ctn-button-1, .ctn-button-2, .ctn-button-3{
   animation: ctn-button-5 1s infinite;
 }
+.ctn-button-2{
+  animation-delay: 0.2s;
+}
+.ctn-button-3{
+  animation-delay: 0.4s;
+}
 @keyframes ctn-button-5{
   0%,100%{
     transform: scale(1.0);
@@ -1733,19 +1837,11 @@ button:focus{
   justify-items: center;
   align-items: center;
   gap: 5px;
-  animation: social-link 2s infinite;
 }
 .footer-container .social-links a span{
   
 }
-@keyframes social-link{
-  0%,20%,40%{
-    opacity: 0;
-  }
-  10%,30%,50%{
-    opacity: 1;
-  }
-}
+
 .footer-container .social-links a img{
   width: 10%;
 }
@@ -1891,8 +1987,8 @@ button:focus{
     width: 15%;
   }
   .ai-chat-container{
-    width: 90%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
   }
   .main-menu{
     position: relative;
@@ -1948,8 +2044,8 @@ button:focus{
     width: 75%;
   }
   .section-5 .ani-tiasang{
-    left: 72.5%;
-    top: 26%;
+    left: 71.5%;
+    top: 22%;
     width: 13%;
   }
   .section-6 .bot-sc-3 .md-col .left-col{
