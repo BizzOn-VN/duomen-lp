@@ -1,0 +1,5 @@
+hossting.md
+hosting.md
+*.secret
+.env
+.DS_Store
