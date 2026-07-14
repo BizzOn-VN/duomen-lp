@@ -3,6 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Ép về www: enzymax.vn -> www.enzymax.vn (chạy trước mọi thứ để đỡ chớp trang) -->
+    <script>
+      if (location.hostname === "enzymax.vn") {
+        location.replace("https://www.enzymax.vn" + location.pathname + location.search + location.hash);
+      }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPQE4F92LH"></script>
     <script>
